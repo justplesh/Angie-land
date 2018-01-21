@@ -1,6 +1,5 @@
 <teamplate>
     <div id="main">
-
     </div>
 </teamplate>
 
