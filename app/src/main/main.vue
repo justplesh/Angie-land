@@ -1,8 +1,8 @@
-<teamplate>
+<template>
     <div id="main">
         <v-header></v-header>
     </div>
-</teamplate>
+</template>
 
 <script>
     import header from '../components/header.vue'
