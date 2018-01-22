@@ -1,16 +1,12 @@
 <template>
     <div class="header">
-        <router-link class="header-logo">
-
-        </router-link>
-        <div class="header-tools">
+        <div class="logo">
+            <img src="../static/img/logo.png"/>
+        </div>
+        <div class="nav">
             <ul>
-                <li>
-                    <router-link>Development progress</router-link>
-                </li>
-                <li>
-                    <router-link>Alpha usage</router-link>
-                </li>
+                <li>Something 1</li>
+                <li>Something 2</li>
             </ul>
         </div>
     </div>
