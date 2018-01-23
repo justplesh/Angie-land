@@ -80,7 +80,7 @@ header .nav a:last-child {
     padding-right: 0;
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 720px) {
 
     header {
         height: auto;
@@ -98,7 +98,7 @@ header .nav a:last-child {
 }
 
 .header-main {
-    margin:0px auto;
+    margin: 0px auto;
     z-index: 0;
 }
 

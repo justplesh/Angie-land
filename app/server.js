@@ -8,7 +8,7 @@ app.listen(5001, 'localhost', () => console.log('listening'));
 
 app.get('/alpha/left', function (req, res) {
     res.statusCode = 200;
-    res.send({'places':30});
+    res.send({'total':100,'left':30});
 });
 
 app.get('*', function (req, res) {
