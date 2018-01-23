@@ -1,5 +1,7 @@
 <template>
-    <v-header></v-header>
+    <div>
+        Главная gfdgfdsfsdafasdfasdf1321231
+    </div>
 </template>
 
 <script>

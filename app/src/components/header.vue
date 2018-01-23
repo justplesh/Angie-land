@@ -1,15 +1,15 @@
 <template>
-    <div class="header">
+    <header>
         <div class="logo">
-            <img src="../static/img/logo.png"/>
+            <img src="../static/img/cocacola.png"/>
         </div>
         <div class="nav">
-            <ul>
-                <li>Something 1</li>
-                <li>Something 2</li>
-            </ul>
+            <a href="#">Something 1</a>
+            <a href="#">Something 2</a>
+            <a href="#">Something 3</a>
+            <a href="#">Something 4</a>
         </div>
-    </div>
+    </header>
 </template>
 
 <script>

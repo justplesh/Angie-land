@@ -4,7 +4,7 @@
   "description": "Very spevial landing for very special messenger",
   "repository": "https://github.com/justplesh/Angie-land",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --port 8001 --hot --host localhost --watch",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --port 8001 --hot --host localhost",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "author": "Anton Kuklin & Patrikeev Aleksey",
