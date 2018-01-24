@@ -162,3 +162,37 @@ p {
     font-weight: 300;
     line-height: 1.4;
 }
+
+.side-bar {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+
+.side-text-bar {
+    display: inline-block;
+    position: relative;
+    padding: 120px 20px;
+    float: left;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.progress-bar {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+}
+
+.score {
+    text-align: center;
+}
