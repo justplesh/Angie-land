@@ -6,12 +6,23 @@
         </div>
         <div class="logo-block blue" id="blue">
             <div class="container">
+                <div class="side-img">
+                    <img src="../static/img/bottle_PNG2944.png" />
+                </div>
+                <div class="side-text">
+                    <h1>Lorem Ipsum</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="logo-block text red" id="red">
+            <div class="container single">
                 <h1>Lorem Ipsum</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
-        <a href="#blue" class="btn-scroll" v-on:click="hideBtn()" v-bind:style="{ display: this.dsp }"></a>
+        <a class="btn-scroll" v-on:click="changeBtn()" v-bind:style="{ display: this.dsp }" v-bind:href="this.ref"></a>
     </div>
 </template>
 
@@ -24,12 +35,14 @@
         },
         data() {
             return {
-                dsp: "block"
+                dsp: "block",
+                ref: "#blue",
             }
         },
         methods: {
-            hideBtn() {
-                this.dsp = "none";
+            changeBtn() {
+                if (this.ref == "#red") this.dsp = "none";
+                this.ref = "#red";
             }
         }
     }

@@ -1,28 +1,4 @@
-/*body {
-    width: 100%;
-    margin: auto;
-}
-
-div {
-    display: block;
-}
-
-.header {
-    background: #6496bc;
-    width: 100%;
-    top: 0;
-    height: 70px;
-}
-
-.logo {
-    height: 100%;
-    float: left;
-}
-
-.nav {
-    float: right;
-}*/
-
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -30,8 +6,9 @@ div {
 
 body {
     font-family: "Roboto", Helvetica Neue, Arial, sans-serif;
+    background-color: green;
 }
-
+/* Танцы с бубном для хедера */
 header {
     width: 90%;
     text-align: justify;
@@ -101,16 +78,16 @@ header .nav a:last-child {
     margin:0px auto;
     z-index: 0;
 }
-
+/* Все блоки по высоте экрана */
 .logo-block {
     box-sizing: border-box;
     height: 100vh;
 }
-
+/* Картинка полностью помещается в блок */
 img {
     max-height: 100%;
 }
-
+/* Просто кнопка вниз */
 .btn-scroll {
     width: 50px;
     height: 50px;
@@ -120,7 +97,7 @@ img {
     background-image: url("../img/down.png");
     background-size: 100%;
 }
-
+/* Отцентровка первой картинки, высота такая чтобы хедером не закрывалась */
 .img-block {
     position: absolute;
     margin: auto;
@@ -134,21 +111,42 @@ img {
     background: red;
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .container {
         width: 1170px;
     }
-}
-
+}*/
+/* Относительное позиционирование чтобы абсолютно спозиционированная картинка внутри знала своего родителя */
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    position: relative;
+    height: 100%;
+}
+/* Для блока только с текстом */
+.text {
+    padding: 120px 20px;
     margin-right: auto;
     margin-left: auto;
 }
+/* Картинка ровно на половину блока */
+.side-img {
+    position: absolute;
+    float: left;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* Текст ровно на половину блока */
+.side-text {
+    position: relative;
+    padding: 120px 20px;
+    margin-left: 50%;
+    float: left;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
 
 .blue {
-    padding: 120px 20px;
     background: blue;
 }
 
