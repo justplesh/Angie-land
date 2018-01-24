@@ -5,14 +5,15 @@
             <div class="container">
                 <div class="side-bar">
                     <div class="progress-bar">
-                        <progress-bar type="circle" ref="line" color="#296690" strokeWidth="0.2" duration="2000">
+                        <progress-bar type="circle" ref="line" color="#296690" strokeWidth="2.0" duration="2000">
                         </progress-bar>
                         <p class="score">14/88</p>
                     </div>
                 </div>
                 <div class="side-text-bar">
                     <h1>Lorem Ipsum</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
             <form @submit.prevent="submitForm">
@@ -41,8 +42,10 @@
             return {}
         },
         mounted: function () {
-            this.$http.get('/alpha/left').then(response => {
-                this.$refs.line.animate(response.body.left / response.body.total);
+            this.$http.get('/alpha/booked').then(response => {
+                this.booked = response.body.booked;
+                this.total = response.body.total;
+                this.$refs.line.animate(response.body.booked / response.body.total);
             }, response => {
                 //TODO: Remove
                 console.log(2);
@@ -54,6 +57,7 @@
                     if (res) {
                         this.$http.post('/alpha/apply', {'email': this.email, 'name': this.name}).then(response => {
                             console.log('success');
+                            //this.$refs.line.animate(this.booked + 1 / this.total);
                         }, response => {
                             console.log('posos');
                         });
