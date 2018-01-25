@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper" v-on="resetTooltips()">
         <v-header></v-header>
         <div class="logo-block blue" id="blue">
             <div class="container">
@@ -22,8 +22,8 @@
                 <form @submit.prevent="submitForm">
                     <fieldset class="clearfix">
                         <p><span class="fontawesome-envelope"></span><input v-model="email" v-validate="'required|email'" type="text" name="email"
-                                                                            placeholder="example@google.com" v-tooltip.right="{ show: true, trigger: 'manual', content: 'hello' }"></p>
-                        <p><span class="fontawesome-user"></span><input v-model="name" placeholder="Adriano" type="text" name="name" v-validate="'required|alpha'"></p>
+                                                                            placeholder="example@google.com" v-tooltip.right="{ show: true, trigger: 'manual', content: 'Please enter a valid email' }"></p>
+                        <p><span class="fontawesome-user"></span><input v-model="name" placeholder="Adriano" type="text" name="name" v-validate="'required|alpha'" v-tooltip.right="{ show: true, trigger: 'manual', content: 'Please enter your name' }"></p>
                         <p><input type="submit" value="Send request"></p>
                     </fieldset>
                 </form>
