@@ -44,7 +44,10 @@
             'v-header': header
         },
         data: function () {
-            return {}
+            return {
+                isEmailValid: true,
+                isNameValid: true
+            }
         },
         mounted: function () {
             this.$http.get('/alpha/booked').then(response => {
@@ -64,6 +67,12 @@
                             console.log('success');
                             //this.$refs.line.animate(this.booked + 1 / this.total);
                         }, response => {
+                            if (errors.has('email')) {
+                                this.isEmailValid = false;
+                            }
+                            if (errors.has('name')) {
+                                this.isNameValid = false;
+                            }
                             console.log('posos');
                         });
                         return;
