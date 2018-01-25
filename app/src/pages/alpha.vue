@@ -16,21 +16,26 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
-            <form @submit.prevent="submitForm">
-                <input v-model="email" v-validate="'required|email'" type="text" name="email"
-                       placeholder="example@google.com">
-                <input v-model="name" placeholder="Adriano" type="text" name="name" v-validate="'required|alpha'">
-                <button type="submit">Send request</button>
-            </form>
-
+        </div>
+        <div class="logo-block login">
+            <div id="login">
+                <form @submit.prevent="submitForm">
+                    <fieldset class="clearfix">
+                        <p><span class="fontawesome-envelope"></span><input v-model="email" v-validate="'required|email'" type="text" name="email"
+                                                                            placeholder="example@google.com" v-tooltip.right="{ show: true, trigger: 'manual', content: 'hello' }"></p>
+                        <p><span class="fontawesome-user"></span><input v-model="name" placeholder="Adriano" type="text" name="name" v-validate="'required|alpha'"></p>
+                        <p><input type="submit" value="Send request"></p>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </div>
 </template>
-
 <script>
     import header from '../components/header.vue';
     import VueResource from 'vue-resource';
     import VeeValidate from 'vee-validate';
+    import VTooltip from 'v-tooltip';
 
 
     export default {

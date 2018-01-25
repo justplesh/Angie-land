@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
+    "v-tooltip": "^2.0.0-rc.30",
     "vee-validate": "^2.0.3",
     "vue": "^2.5.13",
     "vue-progress": "^0.2.1",
