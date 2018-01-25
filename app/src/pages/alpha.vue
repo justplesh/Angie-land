@@ -67,15 +67,15 @@
                             console.log('success');
                             //this.$refs.line.animate(this.booked + 1 / this.total);
                         }, response => {
-                            if (errors.has('email')) {
-                                this.isEmailValid = false;
-                            }
-                            if (errors.has('name')) {
-                                this.isNameValid = false;
-                            }
                             console.log('posos');
                         });
                         return;
+                    }
+                    if (this.errors.has('email')) {
+                        this.isEmailValid = false;
+                    }
+                    if (this.errors.has('name')) {
+                        this.isNameValid = false;
                     }
                     console.log('There are some errors');
                 })

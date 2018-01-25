@@ -8,7 +8,7 @@ const index = require('../pages/index.vue');
 const alpha = require('../pages/alpha.vue');
 
 const router = new VueRouter({
-    // mode: history,
+    mode: 'history',
     routes: [
         {
             name: 'index',
