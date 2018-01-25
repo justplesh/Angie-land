@@ -21,9 +21,14 @@
             <div id="login">
                 <form @submit.prevent="submitForm">
                     <fieldset class="clearfix">
-                        <p><span class="fontawesome-envelope"></span><input v-model="email" v-validate="'required|email'" type="text" name="email"
-                                                                            placeholder="example@google.com" v-tooltip.right="{ show: true, trigger: 'manual', content: 'hello' }"></p>
-                        <p><span class="fontawesome-user"></span><input v-model="name" placeholder="Adriano" type="text" name="name" v-validate="'required|alpha'"></p>
+                        <p><span class="fontawesome-envelope"></span><input v-model="email"
+                                                                            v-validate="'required|email'" type="text"
+                                                                            name="email"
+                                                                            placeholder="example@google.com"
+                                                                            v-tooltip.right="{ show: true, trigger: 'manual', content: 'hello' }">
+                        </p>
+                        <p><span class="fontawesome-user"></span><input v-model="name" placeholder="Adriano" type="text"
+                                                                        name="name" v-validate="'required|alpha'"></p>
                         <p><input type="submit" value="Send request"></p>
                     </fieldset>
                 </form>
@@ -44,7 +49,10 @@
             'v-header': header
         },
         data: function () {
-            return {}
+            return {
+                isEmailValid: true,
+                isNameValid: true
+            }
         },
         mounted: function () {
             this.$http.get('/alpha/booked').then(response => {
@@ -64,6 +72,12 @@
                             console.log('success');
                             //this.$refs.line.animate(this.booked + 1 / this.total);
                         }, response => {
+                            if (errors.has('email')) {
+                                this.isEmailValid = false;
+                            }
+                            if (errors.has('name')) {
+                                this.isNameValid = false;
+                            }
                             console.log('posos');
                         });
                         return;
