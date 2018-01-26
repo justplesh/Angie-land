@@ -3,19 +3,22 @@
         <v-header></v-header>
         <div class="logo-block">
             <span>Currently it was made {{ totalCommits }} commits</span>
+            <countdown date="December 31, 2019"></countdown>
         </div>
     </div>
 </template>
 
 <script>
     import header from '../components/header.vue'
+    import countdown from '../components/countdown.vue'
 
     const url = 'https://api.github.com/repos/justplesh/Angie-land/stats/contributors';
 
     export default {
         name: 'progresses',
         components: {
-            'v-header': header
+            'v-header': header,
+            'countdown': countdown
         },
         data: function () {
             return {
