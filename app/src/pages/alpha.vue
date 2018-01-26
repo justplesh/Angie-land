@@ -12,12 +12,12 @@
                 </div>
                 <div class="side-text-bar">
                     <h1>Lorem Ipsum</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="reg-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a class="btn-register" href="#" v-scroll-to="'#register'">Go to register</a>
                 </div>
             </div>
         </div>
-        <div class="logo-block login">
+        <div class="logo-block login" id="register">
             <div id="login">
                 <form @submit.prevent="submitForm">
                     <fieldset class="clearfix">
@@ -90,7 +90,6 @@
                 })
             },
             resetTooltips() {
-                console.log("in reset");
                 this.isEmailValid = true;
                 this.isNameValid = true;
             }
