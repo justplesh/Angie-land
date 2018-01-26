@@ -5,12 +5,12 @@
             <div class="logo-block red">
                 <img src="../static/img/logo.png" class="img-block"/>
             </div>
-            <div class="logo-block blue" id="blue">
+            <div class="logo-block blue" id="second">
                 <div class="container">
-                    <div class="side-img">
+                    <div class="side-img-left">
                         <img src="../static/img/hustler.jpg"/>
                     </div>
-                    <div class="side-text">
+                    <div class="side-text-right">
                         <h1>Guli-Guli</h1>
                         <p>
                             Not another casual messenger, but real application for life. It is necessary as your Iphone X or Tesla. Feel free to text whatever you want, no one will ever see it, only you and your interlocutor. It's absolutely safe and anonymously.
@@ -18,7 +18,36 @@
                     </div>
                 </div>
             </div>
-            <div class="logo-block text red" id="red">
+
+            <div class="logo-block blue" id="third">
+                <div class="container">
+                    <div class="side-text-left">
+                        <h1>Guli-Guli</h1>
+                        <p>
+                            Not another casual messenger, but real application for life. It is necessary as your Iphone X or Tesla. Feel free to text whatever you want, no one will ever see it, only you and your interlocutor. It's absolutely safe and anonymously.
+                        </p>
+                    </div>
+                    <div class="side-img-right">
+                        <img src="../static/img/hustler.jpg"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo-block blue" id="fourth">
+                <div class="container">
+                    <div class="side-img-left">
+                        <img src="../static/img/hustler.jpg"/>
+                    </div>
+                    <div class="side-text-right">
+                        <h1>Guli-Guli</h1>
+                        <p>
+                            Not another casual messenger, but real application for life. It is necessary as your Iphone X or Tesla. Feel free to text whatever you want, no one will ever see it, only you and your interlocutor. It's absolutely safe and anonymously.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo-block text red" id="fifth">
                 <div class="container single">
                     <h1>Why it is so safe?</h1>
                     <p>
@@ -44,23 +73,29 @@
         data() {
             return {
                 dsp: "block",
-                ref: "#blue",
+                ref: "#second",
                 directionImg: "./src/static/img/down.png",
             }
         },
         methods: {
             changeBtn() {
                 switch (this.ref) {
-                    case "#red":
+                    case "#second":
+                        this.ref = "#third";
+                        break;
+                    case "#third":
+                        this.ref = "#fourth";
+                        break;
+                    case "#fourth":
+                        this.ref = "#fifth";
+                        break;
+                    case "#fifth":
                         this.directionImg = "./src/static/img/up.png";
                         this.ref = "#main";
                         break;
                     case "#main":
                         this.directionImg = "./src/static/img/down.png";
-                        this.ref = "#blue";
-                        break;
-                    case "#blue":
-                        this.ref = "#red";
+                        this.ref = "#second";
                         break;
                 }
             }

@@ -67,7 +67,7 @@ img {
     margin-left: auto;
 }
 /* Картинка ровно на половину блока */
-.side-img {
+.side-img-left {
     position: absolute;
     float: left;
     width: 50%;
@@ -78,10 +78,31 @@ img {
 }
 
 /* Текст ровно на половину блока */
-.side-text {
+.side-text-right {
     position: relative;
     padding: 120px 20px;
     margin-left: 50%;
+    float: left;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.side-img-right {
+    position: relative;
+    margin-left: 50%;
+    float: left;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Текст ровно на половину блока */
+.side-text-left {
+    position: absolute;
+    padding: 120px 20px;
     float: left;
     width: 50%;
     height: 100%;
