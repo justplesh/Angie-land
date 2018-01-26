@@ -12,9 +12,15 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: BadScript;
+    src: url("../fonts/Pecita.otf");
+}
+
 body {
-    font-family: "Roboto", Helvetica Neue, Arial, sans-serif;
-    background-color: green;
+    /*font-family: "Roboto", Helvetica Neue, Arial, sans-serif;
+    background-color: green;*/
+    font-family: BadScript;
 }
 /* Все блоки по высоте экрана */
 .logo-block {
@@ -25,6 +31,8 @@ body {
 img {
     max-height: 100%;
 }
+
+
 /* Просто кнопка вниз */
 .btn-scroll {
     width: 50px;
@@ -65,7 +73,10 @@ img {
     width: 50%;
     height: 100%;
     box-sizing: border-box;
+    background-size: cover;
+    overflow: hidden;
 }
+
 /* Текст ровно на половину блока */
 .side-text {
     position: relative;
