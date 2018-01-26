@@ -44,15 +44,19 @@
         },
         methods: {
             changeBtn() {
-                console.log(this.ref);
-                if (this.ref === "#red") {
-                    this.directionImg = "./src/static/img/up.png";
-                    this.ref = "#main";
-                } else if (this.ref === "#main") {
-                    this.directionImg = "./src/static/img/down.png";
-                    this.ref = "#blue";
+                switch (this.ref) {
+                    case "#red":
+                        this.directionImg = "./src/static/img/up.png";
+                        this.ref = "#main";
+                        break;
+                    case "#main":
+                        this.directionImg = "./src/static/img/down.png";
+                        this.ref = "#blue";
+                        break;
+                    case "#blue":
+                        this.ref = "#red";
+                        break;
                 }
-                this.ref = "#red";
             }
         }
     }
