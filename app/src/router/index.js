@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 
 const index = require('../pages/index.vue');
 const alpha = require('../pages/alpha.vue');
+const progress = require('../pages/progress.vue');
 
 const router = new VueRouter({
     mode: 'history',
@@ -19,6 +20,11 @@ const router = new VueRouter({
             name: 'alpha',
             path: '/alpha',
             component: alpha,
+        },
+        {
+            name: 'progresses',
+            path: '/progress',
+            component: progress,
         }
     ]
 });
