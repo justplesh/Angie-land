@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper">
         <v-header></v-header>
-        <div class="logo-block">
+        <div>
             <span>Currently it was made {{ totalCommits }} commits</span>
-            <countdown date="December 31, 2019"></countdown>
+            <countdown date="01 Jun 2018 00:00:00 GMT"></countdown>
         </div>
     </div>
 </template>
