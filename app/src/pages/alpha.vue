@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" v-on="resetTooltips()">
+    <div class="wrapper" v-on:click="resetTooltips">
         <v-header></v-header>
         <div class="logo-block blue" id="blue">
             <div class="container">
@@ -21,9 +21,18 @@
             <div id="login">
                 <form @submit.prevent="submitForm">
                     <fieldset class="clearfix">
-                        <p><span class="fontawesome-envelope"></span><input v-model="email" v-validate="'required|email'" type="text" name="email"
-                                                                            placeholder="example@google.com" v-tooltip.right="{ show: true, trigger: 'manual', content: 'Please enter a valid email' }"></p>
-                        <p><span class="fontawesome-user"></span><input v-model="name" placeholder="Adriano" type="text" name="name" v-validate="'required|alpha'" v-tooltip.right="{ show: true, trigger: 'manual', content: 'Please enter your name' }"></p>
+                        <p><span class="fontawesome-envelope"></span><input v-model="email"
+                                                                            v-validate="'required|email'"
+                                                                            type="text"
+                                                                            name="email"
+                                                                            placeholder="example@google.com"
+                                                                            v-tooltip.right="{ show: !this.isEmailValid, trigger: 'manual', content: 'Please enter a valid email' }"></p>
+                        <p><span class="fontawesome-user"></span><input v-model="name"
+                                                                        v-validate="'required|alpha'"
+                                                                        type="text"
+                                                                        name="name"
+                                                                        placeholder="Adriano"
+                                                                        v-tooltip.right="{ show: !this.isNameValid, trigger: 'manual', content: 'Please enter your name' }"></p>
                         <p><input type="submit" value="Send request"></p>
                     </fieldset>
                 </form>
@@ -43,13 +52,13 @@
         components: {
             'v-header': header
         },
-        data: function () {
+        data() {
             return {
                 isEmailValid: true,
                 isNameValid: true
             }
         },
-        mounted: function () {
+        mounted() {
             this.$http.get('/alpha/booked').then(response => {
                 this.booked = response.body.booked;
                 this.total = response.body.total;
@@ -79,6 +88,11 @@
                     }
                     console.log('There are some errors');
                 })
+            },
+            resetTooltips() {
+                console.log("in reset");
+                this.isEmailValid = true;
+                this.isNameValid = true;
             }
         }
     }
