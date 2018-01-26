@@ -7,7 +7,7 @@
                     <div class="progress-bar">
                         <progress-bar type="circle" ref="line" color="#296690" strokeWidth="2.0" duration="2000">
                         </progress-bar>
-                        <p class="score">14/88</p>
+                        <p class="score">{{booked}}/{{total}}</p>
                     </div>
                 </div>
                 <div class="side-text-bar">
@@ -26,13 +26,15 @@
                                                                             type="text"
                                                                             name="email"
                                                                             placeholder="example@google.com"
-                                                                            v-tooltip.right="{ show: !this.isEmailValid, trigger: 'manual', content: 'Please enter a valid email' }"></p>
+                                                                            v-tooltip.right="{ show: !this.isEmailValid, trigger: 'manual', content: 'Please enter a valid email' }">
+                        </p>
                         <p><span class="fontawesome-user"></span><input v-model="name"
                                                                         v-validate="'required|alpha'"
                                                                         type="text"
                                                                         name="name"
                                                                         placeholder="Adriano"
-                                                                        v-tooltip.right="{ show: !this.isNameValid, trigger: 'manual', content: 'Please enter your name' }"></p>
+                                                                        v-tooltip.right="{ show: !this.isNameValid, trigger: 'manual', content: 'Please enter your name' }">
+                        </p>
                         <p><input type="submit" value="Send request"></p>
                     </fieldset>
                 </form>
@@ -55,7 +57,9 @@
         data() {
             return {
                 isEmailValid: true,
-                isNameValid: true
+                isNameValid: true,
+                booked: 0,
+                total: 0
             }
         },
         mounted() {
