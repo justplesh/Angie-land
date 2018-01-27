@@ -1,7 +1,7 @@
 <template>
     <div id="main">
         <div class="wrapper">
-            <v-header></v-header>
+            <v-header v-bind:style="{ display: this.dsp }"></v-header>
             <div class="logo-block black">
                 <img src="../static/img/logo.png" class="img-block"/>
             </div>
@@ -72,7 +72,7 @@
         },
         data() {
             return {
-                dsp: "block",
+                dsp: "none",
                 ref: "#second",
                 directionImg: "./src/static/img/down.png",
             }
@@ -98,7 +98,17 @@
                         this.ref = "#second";
                         break;
                 }
+            },
+            headerDisplay() {
+                if (window.pageYOffset) {
+                    this.dsp = "block";
+                } else {
+                    this.dsp = "none";
+                }
             }
-        }
+        },
+        mounted () {
+            window.addEventListener('scroll', this.headerDisplay)
+        },
     }
 </script>
