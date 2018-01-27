@@ -92,10 +92,12 @@
                         break;
                     case "#fifth":
                         this.isDown = false;
+                        this.btnColor = "white";
                         this.ref = "#main";
                         break;
                     case "#main":
                         this.isDown = true;
+                        this.btnColor = "black";
                         this.ref = "#second";
                         break;
                 }
