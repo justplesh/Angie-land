@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper" v-on:click="resetTooltips">
         <v-header active="alpha"></v-header>
-        <div class="logo-block blue" id="blue">
+        <div class="logo-block white" id="blue">
             <div class="container">
                 <div class="side-bar">
                     <div class="progress-bar">
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="logo-block login" id="register">
+        <div class="logo-block login black" id="register">
             <div id="login">
                 <form @submit.prevent="submitForm">
                     <fieldset class="clearfix">
