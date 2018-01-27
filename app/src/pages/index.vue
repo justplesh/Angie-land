@@ -78,6 +78,7 @@
         },
         methods: {
             changeBtn() {
+                console.log(process.env.NODE_ENV);
                 switch (this.ref) {
                     case "#second":
                         this.ref = "#third";

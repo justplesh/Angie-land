@@ -207,3 +207,8 @@ img {
     color: black;
     font-size: 60px;
 }
+
+.message {
+    text-align: center;
+    color: white;
+}

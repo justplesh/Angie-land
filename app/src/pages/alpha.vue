@@ -41,10 +41,12 @@
                     </fieldset>
                 </form>
             </div>
+            <v-message status="true"></v-message>
         </div>
     </div>
 </template>
 <script>
+    import message from '../components/message.vue';
     import header from '../components/header.vue';
     import VueResource from 'vue-resource';
     import VeeValidate from 'vee-validate';
@@ -54,7 +56,8 @@
     export default {
         name: 'alpha',
         components: {
-            'v-header': header
+            'v-header': header,
+            'v-message': message,
         },
         data() {
             return {
