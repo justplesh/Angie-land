@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="side-bar">
                     <div class="progress-bar">
-                        <progress-bar type="circle" ref="line" color="#296690" strokeWidth="2.0" duration="2000">
+                        <progress-bar type="circle" ref="line" color="#000000" strokeWidth="2.0" duration="2000">
                         </progress-bar>
                         <p class="score">{{booked}}/{{total}}</p>
                     </div>
