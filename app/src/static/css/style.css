@@ -33,13 +33,15 @@ img {
 
 /* Просто кнопка вниз */
 .btn-scroll {
-    font-size: 5em;
     width: 50px;
     height: 50px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    /*background-size: 100%;*/
+}
+
+.btn-scroll::before {
+    font-size: 80px !important;
 }
 
 /* Отцентровка первой картинки, высота такая чтобы хедером не закрывалась */
@@ -164,11 +166,12 @@ p {
     left: 0;
     bottom: 0;
     right: 0;
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
 }
 
 .score {
+    font-size: 50px;
     text-align: center;
 }
 

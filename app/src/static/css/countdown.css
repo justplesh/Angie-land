@@ -30,6 +30,7 @@
 
 .commits {
     text-align: center;
+    display: block !important;
 }
 
 .block {
