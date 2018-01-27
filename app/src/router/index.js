@@ -26,7 +26,10 @@ const router = new VueRouter({
             path: '/progress',
             component: progress,
         }
-    ]
+    ],
+    scrollBehavior() {
+        return { x: 0, y: 0 }
+    }
 });
 
 export default router;

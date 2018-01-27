@@ -78,6 +78,7 @@
         },
         methods: {
             changeBtn() {
+                console.log(process.env.NODE_ENV);
                 switch (this.ref) {
                     case "#second":
                         this.ref = "#third";
@@ -92,10 +93,12 @@
                         break;
                     case "#fifth":
                         this.isDown = false;
+                        this.btnColor = "white";
                         this.ref = "#main";
                         break;
                     case "#main":
                         this.isDown = true;
+                        this.btnColor = "black";
                         this.ref = "#second";
                         break;
                 }
