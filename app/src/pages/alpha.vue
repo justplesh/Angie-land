@@ -42,7 +42,7 @@
                     </fieldset>
                 </form>
             </div>
-            <v-message status="true"></v-message>
+            <v-message v-bind:status="true"></v-message>
         </div>
     </div>
 </template>

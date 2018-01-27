@@ -6,6 +6,7 @@
                 <div class="time">
                     <countdown date="01 Jun 2018 00:00:00 GMT"></countdown>
                     <div class="commits"><span>Currently it was made {{ totalCommits }} commits</span></div>
+                    <v-message v-bind:status="false"></v-message>
                 </div>
             </div>
         </div>
@@ -15,6 +16,7 @@
 <script>
     import header from '../components/header.vue'
     import countdown from '../components/countdown.vue'
+    import message from '../components/message.vue'
 
     const url = 'https://api.github.com/repos/justplesh/Guli-Guli-land/stats/contributors';
 
@@ -22,7 +24,8 @@
         name: 'progresses',
         components: {
             'v-header': header,
-            'countdown': countdown
+            'countdown': countdown,
+            'v-message': message,
         },
         data: function () {
             return {

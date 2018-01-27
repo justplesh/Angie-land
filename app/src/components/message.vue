@@ -11,7 +11,7 @@
         },
         data() {
             return {
-                message: this.status ? "Sent successfully" : "Failed",
+                message: this.status ? "Sent successfully" : "Request failed",
             }
         }
     }
