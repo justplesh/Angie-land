@@ -37,7 +37,7 @@
             <div class="logo-block white" id="fourth">
                 <div class="container">
                     <div class="side-img-left">
-                        <img src="../static/img/angry.jpg"/>
+                        <img src="../static/img/man.jpg"/>
                     </div>
                     <div class="side-text-right">
                         <h1>What can i do with your stuff?</h1>

@@ -40,7 +40,7 @@
 }
 
 .time-text, .time-parent span {
-    color: #1abc9c;
+    color: black;
     font-size: 40px;
     font-family: 'Roboto Condensed', serif;
     font-weight: 40;
@@ -50,7 +50,7 @@
 }
 
 .digit {
-    color: #ecf0f1;
+    color: black;
     font-size: 150px;
     font-weight: 100;
     font-family: 'Roboto', serif;
