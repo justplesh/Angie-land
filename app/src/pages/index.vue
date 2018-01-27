@@ -57,8 +57,10 @@
                     </p>
                 </div>
             </div>
-            <a class="btn-scroll" href="#" v-on:click="changeBtn"
-               v-bind:style="{ backgroundImage: 'url(' + this.directionImg + ')' }" v-scroll-to="this.ref"></a>
+            <a class="btn-scroll fontawesome-caret-down" href="#" v-on:click="changeBtn"
+               v-bind:class="{ 'fontawesome-angle-down': this.isDown, 'fontawesome-angle-up': !this.isDown }"
+               v-bind:style="{ color: this.btnColor }"
+               v-scroll-to="this.ref"></a>
         </div>
     </div>
 </template>
@@ -74,7 +76,8 @@
             return {
                 dsp: "none",
                 ref: "#second",
-                directionImg: "./src/static/img/down.png",
+                isDown: true,
+                btnColor: "white",
             }
         },
         methods: {
@@ -82,19 +85,23 @@
                 switch (this.ref) {
                     case "#second":
                         this.ref = "#third";
+                        this.btnColor = "black";
                         break;
                     case "#third":
                         this.ref = "#fourth";
+                        this.btnColor = "white";
                         break;
                     case "#fourth":
                         this.ref = "#fifth";
+                        this.btnColor = "black";
                         break;
                     case "#fifth":
-                        this.directionImg = "./src/static/img/up.png";
+                        this.isDown = false;
                         this.ref = "#main";
+                        this.btnColor = "white";
                         break;
                     case "#main":
-                        this.directionImg = "./src/static/img/down.png";
+                        this.isDown = true;
                         this.ref = "#second";
                         break;
                 }
