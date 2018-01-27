@@ -20,22 +20,23 @@
             </div>
         </div>
         <div class="logo-block login black" id="register">
+            <ring-loader size="120px" v-bind:loading=this.loading></ring-loader>
             <div id="login">
                 <form @submit.prevent="submitForm">
                     <fieldset class="clearfix">
                         <p><span class="fontawesome-envelope register-icon"></span><input v-model="email"
-                                                                            v-validate="'required|email'"
-                                                                            type="text"
-                                                                            name="email"
-                                                                            placeholder="example@google.com"
-                                                                            v-tooltip.right="{ show: !this.isEmailValid, trigger: 'manual', content: 'Please enter a valid email' }">
+                                                                                          v-validate="'required|email'"
+                                                                                          type="text"
+                                                                                          name="email"
+                                                                                          placeholder="example@google.com"
+                                                                                          v-tooltip.right="{ show: !this.isEmailValid, trigger: 'manual', content: 'Please enter a valid email' }">
                         </p>
                         <p><span class="fontawesome-user register-icon"></span><input v-model="name"
-                                                                        v-validate="'required|alpha'"
-                                                                        type="text"
-                                                                        name="name"
-                                                                        placeholder="Adriano"
-                                                                        v-tooltip.right="{ show: !this.isNameValid, trigger: 'manual', content: 'Please enter your name' }">
+                                                                                      v-validate="'required|alpha'"
+                                                                                      type="text"
+                                                                                      name="name"
+                                                                                      placeholder="Adriano"
+                                                                                      v-tooltip.right="{ show: !this.isNameValid, trigger: 'manual', content: 'Please enter your name' }">
                         </p>
                         <p><input type="submit" value="Send request"></p>
                     </fieldset>
@@ -51,6 +52,7 @@
     import VueResource from 'vue-resource';
     import VeeValidate from 'vee-validate';
     import VTooltip from 'v-tooltip';
+    import RingLoader from 'vue-spinner/src/RingLoader.vue'
 
 
     export default {
@@ -58,13 +60,15 @@
         components: {
             'v-header': header,
             'v-message': message,
+            'ring-loader': RingLoader
         },
         data() {
             return {
                 isEmailValid: true,
                 isNameValid: true,
                 booked: 0,
-                total: 0
+                total: 0,
+                loading: false
             }
         },
         mounted() {
@@ -79,9 +83,11 @@
             submitForm() {
                 this.$validator.validateAll().then(res => {
                     if (res) {
+                        this.loading = true;
                         this.$http.post('/alpha/apply', {'email': this.email, 'name': this.name}).then(response => {
                         }, response => {
                         });
+                        this.loading = false;
                         return;
                     }
                     if (this.errors.has('email')) {
