@@ -1,2 +1,6 @@
-# Angie-land
-Landing for messenger (ms.)Angie(r)
+# Guli-Guli
+Landing for messenger Guli Guli
+    
+
+## How to start?
+`npm i && npm run build && node server.js`
