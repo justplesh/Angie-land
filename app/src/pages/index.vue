@@ -3,6 +3,7 @@
         <div class="wrapper">
             <v-header v-bind:style="{ display: this.dsp }"></v-header>
             <div class="logo-block black">
+                <div class="title"><span>Guli-Guli ©Golub</span></div>
                 <img src="../static/img/logo.png" class="img-block"/>
             </div>
             <div class="logo-block white" id="second">

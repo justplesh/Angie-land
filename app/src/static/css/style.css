@@ -200,3 +200,15 @@ p {
     line-height: 200px;
     white-space: nowrap;
 }
+
+.title {
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 30px;
+    color: white;
+    font-size: 60px;
+}
