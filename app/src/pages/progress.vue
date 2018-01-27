@@ -2,8 +2,12 @@
     <div class="wrapper">
         <v-header></v-header>
         <div>
-            <span>Currently it was made {{ totalCommits }} commits</span>
-            <countdown date="01 Jun 2018 00:00:00 GMT"></countdown>
+            <div class="time-parent">
+                <div class="time">
+                    <countdown date="01 Jun 2018 00:00:00 GMT"></countdown>
+                    <div class="commits" style="display:block;"><span>Currently it was made <b>{{ totalCommits }}</b> commits</span></div>
+                </div>
+            </div>
         </div>
     </div>
 </template>

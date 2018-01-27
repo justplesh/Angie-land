@@ -1,22 +1,22 @@
 <template>
-    <div>
         <div>
-            <p>{{ days }}</p>
-            <p>Days</p>
+            <div class="block">
+                <p class="digit">{{ days }}</p>
+                <p class="time-text">Days</p>
+            </div>
+            <div>
+                <p class="digit">{{ hours }}</p>
+                <p class="time-text">Hours</p>
+            </div>
+            <div>
+                <p class="digit">{{ minutes }}</p>
+                <p class="time-text">Minutes</p>
+            </div>
+            <div>
+                <p class="digit">{{ seconds }}</p>
+                <p class="time-text">Seconds</p>
+            </div>
         </div>
-        <div>
-            <p>{{ hours }}</p>
-            <p>Hours</p>
-        </div>
-        <div>
-            <p>{{ minutes }}</p>
-            <p>Minutes</p>
-        </div>
-        <div>
-            <p>{{ seconds }}</p>
-            <p>Seconds</p>
-        </div>
-    </div>
 </template>
 
 <script>
