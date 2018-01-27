@@ -69,7 +69,6 @@ img {
     margin-right: auto;
     margin-left: auto;
 }
-
 /* Картинка ровно на половину блока */
 .side-img-left {
     position: absolute;
@@ -209,6 +208,6 @@ p {
     bottom: 0;
     right: 0;
     top: 30px;
-    color: white;
+    color: black;
     font-size: 60px;
 }

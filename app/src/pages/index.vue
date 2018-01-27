@@ -1,9 +1,9 @@
 <template>
     <div id="main">
         <div class="wrapper">
-            <v-header v-bind:style="{ display: this.dsp }"></v-header>
-            <div class="logo-block black">
-                <div class="title"><span>Guli-Guli ©Golub</span></div>
+            <v-header active="none" v-bind:style="{ display: this.dsp }"></v-header>
+            <div class="logo-block white">
+                <div class="title"><span>"Guli-Guli" ©Golub</span></div>
                 <img src="../static/img/logo.png" class="img-block"/>
             </div>
             <div class="logo-block white" id="second">
@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="logo-block black" id="fifth">
+            <div class="logo-block white" id="fifth">
                 <div class="container">
                     <router-link to="alpha" class="btn-register btn-center">Register now</router-link>
                 </div>
@@ -73,7 +73,7 @@
                 dsp: "none",
                 ref: "#second",
                 isDown: true,
-                btnColor: "white",
+                btnColor: "black",
             }
         },
         methods: {
@@ -81,7 +81,6 @@
                 switch (this.ref) {
                     case "#second":
                         this.ref = "#third";
-                        this.btnColor = "black";
                         break;
                     case "#third":
                         this.ref = "#fourth";
@@ -94,7 +93,6 @@
                     case "#fifth":
                         this.isDown = false;
                         this.ref = "#main";
-                        this.btnColor = "white";
                         break;
                     case "#main":
                         this.isDown = true;

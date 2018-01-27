@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <v-header></v-header>
+        <v-header active="progress"></v-header>
         <div>
             <div class="time-parent">
                 <div class="time">

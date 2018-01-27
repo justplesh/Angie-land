@@ -6,8 +6,16 @@
             </router-link>
         </div>
         <div class="nav">
-            <router-link to="alpha">Alpha</router-link>
-            <router-link to="progress">Progress</router-link>
+            <router-link to="alpha" class="header-link" v-bind:class="{'link-active': this.active == 'alpha'}">Alpha</router-link>
+            <router-link to="progress" class="header-link" v-bind:class="{'link-active': this.active == 'progress'}">Progress</router-link>
         </div>
     </header>
 </template>
+
+<script>
+    export default {
+        props: {
+            active: String,
+        }
+    }
+</script>

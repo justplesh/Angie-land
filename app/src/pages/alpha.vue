@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper" v-on:click="resetTooltips">
-        <v-header></v-header>
+        <v-header active="alpha"></v-header>
         <div class="logo-block blue" id="blue">
             <div class="container">
                 <div class="side-bar">
