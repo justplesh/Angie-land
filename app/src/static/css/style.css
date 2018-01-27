@@ -1,10 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
-
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
 @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
-
 
 /* Reset */
 * {
@@ -14,7 +11,7 @@
 
 @font-face {
     font-family: BadScript;
-    src: url("../fonts/Pecita.otf");
+    src: url("../fonts/Uni Sans Heavy.otf");
 }
 
 body {
@@ -22,16 +19,17 @@ body {
     background-color: green;*/
     font-family: BadScript;
 }
+
 /* Все блоки по высоте экрана */
 .logo-block {
     box-sizing: border-box;
     height: 100vh;
 }
+
 /* Картинка полностью помещается в блок */
 img {
     max-height: 100%;
 }
-
 
 /* Просто кнопка вниз */
 .btn-scroll {
@@ -42,6 +40,7 @@ img {
     right: 20px;
     background-size: 100%;
 }
+
 /* Отцентровка первой картинки, высота такая чтобы хедером не закрывалась */
 .img-block {
     position: absolute;
@@ -55,17 +54,20 @@ img {
 .red {
     background: red;
 }
+
 /* Относительное позиционирование чтобы абсолютно спозиционированная картинка внутри знала своего родителя */
 .container {
     position: relative;
     height: 100%;
 }
+
 /* Для блока только с текстом */
 .text {
     padding: 120px 20px;
     margin-right: auto;
     margin-left: auto;
 }
+
 /* Картинка ровно на половину блока */
 .side-img-left {
     position: absolute;
@@ -111,6 +113,14 @@ img {
 
 .blue {
     background: blue;
+}
+
+.white {
+    background: white;
+}
+
+.black {
+    background: black;
 }
 
 h1 {
@@ -160,7 +170,6 @@ p {
 .score {
     text-align: center;
 }
-
 
 .reg-description {
     margin-bottom: 100px;
