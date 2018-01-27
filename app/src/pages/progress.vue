@@ -16,7 +16,7 @@
     import header from '../components/header.vue'
     import countdown from '../components/countdown.vue'
 
-    const url = 'https://api.github.com/repos/justplesh/Angie-land/stats/contributors';
+    const url = 'https://api.github.com/repos/justplesh/Guli-Guli-land/stats/contributors';
 
     export default {
         name: 'progresses',
