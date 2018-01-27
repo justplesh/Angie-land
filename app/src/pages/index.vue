@@ -6,47 +6,30 @@
                 <div class="title"><span>"Guli-Guli" ©Golub</span></div>
                 <img src="../static/img/logo.png" class="img-block"/>
             </div>
-            <div class="logo-block white" id="second">
-                <div class="container">
-                    <div class="side-img-left">
-                        <img src="../static/img/businessman.jpg"/>
-                    </div>
-                    <div class="side-text-right">
-                        <h1 class="text-title">Guli-Guli</h1>
-                        <p class="description">
-                            Not another casual messenger, but real application for life. It is necessary as your Iphone X or Tesla. Beautiful life, for beautiful people, with beautiful messenger. Feel free to text whatever you want, no one will ever see it, only you and your interlocutor. It's absolutely safe and anonymously
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="logo-block white" id="third">
-                <div class="container">
-                    <div class="side-text-left">
-                        <h1 class="text-title">Why it is so safe?</h1>
-                        <p class="description">
-                            Guli-Guli uses partly decentralized network. All information will be passed through our server encoded. It will be encrypted so hard, that neither of KGB, Kommunists or Zloy Russkiy Nikolay could make a sense.
-                        </p>
-                    </div>
-                    <div class="side-img-right">
-                        <img src="../static/img/hustler.jpg"/>
-                    </div>
-                </div>
-            </div>
+            <sep-block color="white"
+                       view="text-right"
+                       title="Guli-Guli"
+                       text="Not another casual messenger, but real application for life. It is necessary as your Iphone X or Tesla. Beautiful life, for beautiful people, with beautiful messenger. Feel free to text whatever you want, no one will ever see it, only you and your interlocutor. It's absolutely safe and anonymously"
+                       image="/src/static/img/businessman.jpg"
+                       id="second">
+            </sep-block>
 
-            <div class="logo-block white" id="fourth">
-                <div class="container">
-                    <div class="side-img-left">
-                        <img src="../static/img/man.jpg"/>
-                    </div>
-                    <div class="side-text-right">
-                        <h1 class="text-title">What can i do with your stuff?</h1>
-                        <p class="description">
-                            You will be able to text, make audio and video calls, send media files and flex however you want. With our messenger you will start new era of communication. Place your bet on us!
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <sep-block color="white"
+                       view="text-left"
+                       title="Why it is so safe?"
+                       text="Guli-Guli uses partly decentralized network. All information will be passed through our server encoded. It will be encrypted so hard, that neither of KGB, Kommunists or Zloy Russkiy Nikolay could make a sense."
+                       image="/src/static/img/hustler.jpg"
+                       id="third">
+            </sep-block>
+
+            <sep-block color="white"
+                       view="text-right"
+                       title="What can i do with your stuff?"
+                       text="You will be able to text, make audio and video calls, send media files and flex however you want. With our messenger you will start new era of communication. Place your bet on us!"
+                       image="/src/static/img/man.jpg"
+                       id="fourth">
+            </sep-block>
 
             <div class="logo-block black" id="fifth">
                 <div class="container">
@@ -63,10 +46,12 @@
 
 <script>
     import header from '../components/header.vue'
+    import sepBlock from '../components/sep-block.vue'
 
     export default {
         components: {
-            'v-header': header
+            'v-header': header,
+            'sep-block': sepBlock,
         },
         data() {
             return {
