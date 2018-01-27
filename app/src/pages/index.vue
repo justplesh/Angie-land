@@ -12,8 +12,8 @@
                         <img src="../static/img/businessman.jpg"/>
                     </div>
                     <div class="side-text-right">
-                        <h1>Guli-Guli</h1>
-                        <p>
+                        <h1 class="text-title">Guli-Guli</h1>
+                        <p class="description">
                             Not another casual messenger, but real application for life. It is necessary as your Iphone X or Tesla. Beautiful life, for beautiful people, with beautiful messenger. Feel free to text whatever you want, no one will ever see it, only you and your interlocutor. It's absolutely safe and anonymously
                         </p>
                     </div>
@@ -23,8 +23,8 @@
             <div class="logo-block white" id="third">
                 <div class="container">
                     <div class="side-text-left">
-                        <h1>Why it is so safe?</h1>
-                        <p>
+                        <h1 class="text-title">Why it is so safe?</h1>
+                        <p class="description">
                             Guli-Guli uses partly decentralized network. All information will be passed through our server encoded. It will be encrypted so hard, that neither of KGB, Kommunists or Zloy Russkiy Nikolay could make a sense.
                         </p>
                     </div>
@@ -40,15 +40,15 @@
                         <img src="../static/img/man.jpg"/>
                     </div>
                     <div class="side-text-right">
-                        <h1>What can i do with your stuff?</h1>
-                        <p>
+                        <h1 class="text-title">What can i do with your stuff?</h1>
+                        <p class="description">
                             You will be able to text, make audio and video calls, send media files and flex however you want. With our messenger you will start new era of communication. Place your bet on us!
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="logo-block white" id="fifth">
+            <div class="logo-block black" id="fifth">
                 <div class="container">
                     <router-link to="alpha" class="btn-register btn-center">Register now</router-link>
                 </div>

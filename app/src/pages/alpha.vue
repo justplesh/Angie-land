@@ -7,12 +7,12 @@
                     <div class="progress-bar">
                         <progress-bar type="circle" ref="line" color="#000000" strokeWidth="2.0" duration="2000">
                         </progress-bar>
-                        <p class="score">{{booked}}/{{total}}</p>
+                        <p class="description score">{{booked}}/{{total}}</p>
                     </div>
                 </div>
                 <div class="side-text-bar">
-                    <h1>Alpha test</h1>
-                    <p class="reg-description">
+                    <h1 class="text-title">Alpha test</h1>
+                    <p class="description reg-description">
                         Ofc, our messenger is only for very privileged people, that's why there is only {{ total
                         }} tickets for access to alpha testing, hurry up!</p>
                     <a class="btn-register" href="#" v-scroll-to="'#register'">Go to register</a>
@@ -23,14 +23,14 @@
             <div id="login">
                 <form @submit.prevent="submitForm">
                     <fieldset class="clearfix">
-                        <p><span class="fontawesome-envelope"></span><input v-model="email"
+                        <p><span class="fontawesome-envelope register-icon"></span><input v-model="email"
                                                                             v-validate="'required|email'"
                                                                             type="text"
                                                                             name="email"
                                                                             placeholder="example@google.com"
                                                                             v-tooltip.right="{ show: !this.isEmailValid, trigger: 'manual', content: 'Please enter a valid email' }">
                         </p>
-                        <p><span class="fontawesome-user"></span><input v-model="name"
+                        <p><span class="fontawesome-user register-icon"></span><input v-model="name"
                                                                         v-validate="'required|alpha'"
                                                                         type="text"
                                                                         name="name"

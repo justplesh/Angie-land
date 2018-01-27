@@ -13,10 +13,9 @@
 .tooltip .tooltip-arrow {
     width: 0;
     height: 0;
-    border-style: solid;
     position: absolute;
     margin: 5px;
-    border-color: white;
+    border: solid white;
     z-index: 1;
 }
 
@@ -85,7 +84,7 @@
     color: white;
     padding: 24px;
     border-radius: 5px;
-    box-shadow: 0 5px 30px rgba(black, .1);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .1);
 }
 
 .tooltip.popover .popover-arrow {

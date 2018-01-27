@@ -10,14 +10,12 @@
 }
 
 @font-face {
-    font-family: BadScript;
+    font-family: UniSans;
     src: url("../fonts/Uni Sans Heavy.otf");
 }
 
 body {
-    /*font-family: "Roboto", Helvetica Neue, Arial, sans-serif;
-    background-color: green;*/
-    font-family: BadScript;
+    font-family: UniSans;
 }
 
 /* Все блоки по высоте экрана */
@@ -26,12 +24,11 @@ body {
     height: 100vh;
 }
 
-/* Картинка полностью помещается в блок */
+/* Все картинки полностью помещаются в блок */
 img {
     max-height: 100%;
 }
 
-/* Просто кнопка вниз */
 .btn-scroll {
     width: 50px;
     height: 50px;
@@ -55,23 +52,18 @@ img {
     height: 80%;
 }
 
-.red {
-    background: red;
-}
-
 /* Относительное позиционирование чтобы абсолютно спозиционированная картинка внутри знала своего родителя */
 .container {
     position: relative;
     height: 100%;
 }
 
-/* Для блока только с текстом */
 .text {
     padding: 120px 20px;
     margin-right: auto;
     margin-left: auto;
 }
-/* Картинка ровно на половину блока */
+
 .side-img-left {
     position: absolute;
     float: left;
@@ -82,7 +74,6 @@ img {
     overflow: hidden;
 }
 
-/* Текст ровно на половину блока */
 .side-text-right {
     position: relative;
     padding: 120px 20px;
@@ -104,7 +95,6 @@ img {
     overflow: hidden;
 }
 
-/* Текст ровно на половину блока */
 .side-text-left {
     position: absolute;
     padding: 120px 20px;
@@ -112,10 +102,6 @@ img {
     width: 50%;
     height: 100%;
     box-sizing: border-box;
-}
-
-.blue {
-    background: blue;
 }
 
 .white {
@@ -126,14 +112,14 @@ img {
     background: black;
 }
 
-h1 {
+.text-title {
     font-weight: 100;
     font-size: 73px;
     line-height: 1.1;
     text-align: center;
 }
 
-p {
+.description {
     font-size: 31px;
     font-weight: 300;
     line-height: 1.4;
@@ -185,7 +171,7 @@ p {
     border-radius: 3px;
     padding: 25px 100px;
     text-decoration: none;
-    color: #eee;
+    color: white;
     font-weight: bold;
     font-size: 60px;
 }
