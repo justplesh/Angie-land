@@ -11,8 +11,10 @@
                     </div>
                 </div>
                 <div class="side-text-bar">
-                    <h1>Lorem Ipsum</h1>
-                    <p class="reg-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h1>Alpha test</h1>
+                    <p class="reg-description">
+                        Ofc, our messenger is only for very privileged people, that's why there is only {{ total
+                        }} tickets for access to alpha testing, hurry up!</p>
                     <a class="btn-register" href="#" v-scroll-to="'#register'">Go to register</a>
                 </div>
             </div>
@@ -68,8 +70,6 @@
                 this.total = response.body.total;
                 this.$refs.line.animate(response.body.booked / response.body.total);
             }, response => {
-                //TODO: Remove
-                console.log(2);
             });
         },
         methods: {
@@ -77,10 +77,7 @@
                 this.$validator.validateAll().then(res => {
                     if (res) {
                         this.$http.post('/alpha/apply', {'email': this.email, 'name': this.name}).then(response => {
-                            console.log('success');
-                            //this.$refs.line.animate(this.booked + 1 / this.total);
                         }, response => {
-                            console.log('posos');
                         });
                         return;
                     }
@@ -90,7 +87,6 @@
                     if (this.errors.has('name')) {
                         this.isNameValid = false;
                     }
-                    console.log('There are some errors');
                 })
             },
             resetTooltips() {
