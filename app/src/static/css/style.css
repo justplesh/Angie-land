@@ -49,6 +49,7 @@ img {
     left: 0;
     bottom: 0;
     right: 0;
+    top: 0;
     height: 80%;
 }
 
@@ -183,4 +184,19 @@ p {
     text-decoration: none;
     color: #eee;
     font-weight: bold;
+    font-size: 60px;
+}
+
+.btn-center {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    white-space: nowrap;
 }

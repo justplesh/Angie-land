@@ -47,14 +47,9 @@
                 </div>
             </div>
 
-            <div class="logo-block text black" id="fifth">
-                <div class="container single">
-                    <h1></h1>
-                    <p>
-                    </p>
-                    <p>
-
-                    </p>
+            <div class="logo-block black" id="fifth">
+                <div class="container">
+                    <router-link to="alpha" class="btn-register btn-center">Register now</router-link>
                 </div>
             </div>
             <a class="btn-scroll fontawesome-caret-down" href="#" v-on:click="changeBtn"
