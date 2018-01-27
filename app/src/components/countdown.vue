@@ -1,22 +1,22 @@
 <template>
-        <div>
-            <div class="block">
-                <p class="digit">{{ days }}</p>
-                <p class="time-text">Days</p>
-            </div>
-            <div>
-                <p class="digit">{{ hours }}</p>
-                <p class="time-text">Hours</p>
-            </div>
-            <div>
-                <p class="digit">{{ minutes }}</p>
-                <p class="time-text">Minutes</p>
-            </div>
-            <div>
-                <p class="digit">{{ seconds }}</p>
-                <p class="time-text">Seconds</p>
-            </div>
+    <div>
+        <div class="block">
+            <p class="digit">{{ days }}</p>
+            <p class="time-text">Days</p>
         </div>
+        <div>
+            <p class="digit">{{ hours }}</p>
+            <p class="time-text">Hours</p>
+        </div>
+        <div>
+            <p class="digit">{{ minutes }}</p>
+            <p class="time-text">Minutes</p>
+        </div>
+        <div>
+            <p class="digit">{{ seconds }}</p>
+            <p class="time-text">Seconds</p>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -37,22 +37,27 @@
         },
         computed: {
             seconds() {
-                return (this.finalDate - this.now) % 60;
+                return this.checkDigitNumber((this.finalDate - this.now) % 60);
             },
             minutes() {
-                return Math.trunc((this.finalDate - this.now) / 60) % 60;
+                return this.checkDigitNumber(Math.trunc((this.finalDate - this.now) / 60) % 60);
             },
             hours() {
-                return Math.trunc((this.finalDate - this.now) / 60 / 60) % 24;
+                return this.checkDigitNumber(Math.trunc((this.finalDate - this.now) / 60 / 60) % 24);
             },
             days() {
                 return Math.trunc((this.finalDate - this.now) / 60 / 60 / 24);
-                а
             }
         },
         methods: {
             updateCurrentTime() {
                 this.now += 1;
+            },
+            checkDigitNumber(n) {
+                if (n.toString().length === 1) {
+                    return "0" + n;
+                }
+                return n;
             }
         }
     }
