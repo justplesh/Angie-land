@@ -6,7 +6,7 @@
                 <div class="time">
                     <countdown date="01 Jun 2018 00:00:00 GMT"></countdown>
                     <div class="commits"><span>Currently it was made {{ totalCommits }} commits</span></div>
-                    <ring-loader size="120px" v-bind:loading=this.loading></ring-loader>
+                    <ring-loader style="display: block" size="120px" v-bind:loading=this.loading></ring-loader>
                     <v-message v-bind:status="false"></v-message>
                 </div>
             </div>
