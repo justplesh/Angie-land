@@ -88,12 +88,17 @@
                 this.$validator.validateAll().then(res => {
                     if (res) {
                         this.loading = true;
-                        this.$http.post('/alpha/apply', {'email': this.email, 'name': this.name}).then(response => {
+                        this.$http.post('/alpha/apply', {
+                            'email': this.email,
+                            'name': this.name,
+                            timeout: 3000
+                        }).then(response => {
                             this.triedApply = true;
                             this.RegStatus = true;
                         }, response => {
-                            this.RegStatus = false;
-                            this.triedApply = true;
+                            this.showApplyFail();
+                        }).catch(() => {
+                            this.showApplyFail();
                         });
                         this.loading = false;
                         return;
@@ -109,6 +114,10 @@
             resetTooltips() {
                 this.isEmailValid = true;
                 this.isNameValid = true;
+            },
+            showApplyFail() {
+                this.RegStatus = false;
+                this.triedApply = true;
             }
         }
     }
