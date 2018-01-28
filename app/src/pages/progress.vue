@@ -5,10 +5,10 @@
             <div class="time-parent">
                 <div class="time">
                     <v-countdown date="01 Jun 2018 00:00:00 GMT"></v-countdown>
-                    <ring-loader size="120px" v-bind:loading=this.loading></ring-loader>
                     <div class="commits"><span>Currently it was made {{ totalCommits }} commits</span></div>
-                    <v-message v-if=this.failGotCommits status=false
-                               failMessage="'There were some troubles, checking commit number. Refresh the page to try again'"></v-message>
+                    <ring-loader style="display: block" size="120px" v-bind:loading=this.loading></ring-loader>
+                    <v-message v-if=this.failGotCommits v-bind:status="false"
+                               failMessage="There were some troubles, checking commit number. Refresh the page to try again"></v-message>
                 </div>
             </div>
         </div>
@@ -47,13 +47,16 @@
                 });
                 this.totalCommits = totalCommits;
             }, res => {
+                console.log("in res");
                 this.showCommitsTrouble();
             }).catch(() => {
+                console.log("in catch");
                 this.showCommitsTrouble();
             })
         },
         methods: {
             showCommitsTrouble() {
+                console.log("in comtroub");
                 this.loading = false;
                 this.failGotCommits = true;
             }
