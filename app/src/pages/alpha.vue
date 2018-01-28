@@ -43,7 +43,7 @@
             </div>
             <ring-loader size="120px" v-bind:loading=this.loading></ring-loader>
             <v-message v-if=this.triedApply v-bind:status="this.RegStatus" successMessage="You successfully applied"
-                       failMessage="'There were some troubles, try again'"></v-message>
+                       failMessage="There were some troubles, try again"></v-message>
         </div>
     </div>
 </template>
