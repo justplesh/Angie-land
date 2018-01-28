@@ -42,7 +42,8 @@
                 </form>
             </div>
             <ring-loader size="120px" v-bind:loading=this.loading></ring-loader>
-            <v-message v-bind:status="true"></v-message>
+            <v-message v-if=this.triedApply v-bind:status="this.RegStatus" successMessage="'You successfully applied'"
+                       failMessage="'There were some troubles, try again'"></v-message>
         </div>
     </div>
 </template>
@@ -68,7 +69,8 @@
                 isNameValid: true,
                 booked: 0,
                 total: 0,
-                loading: false
+                loading: false,
+                triedApply: false,
             }
         },
         mounted() {
@@ -81,11 +83,16 @@
         },
         methods: {
             submitForm() {
+                this.triedApply = false;
                 this.$validator.validateAll().then(res => {
                     if (res) {
                         this.loading = true;
                         this.$http.post('/alpha/apply', {'email': this.email, 'name': this.name}).then(response => {
+                            this.triedApply = true;
+                            this.RegStatus = true;
                         }, response => {
+                            this.RegStatus = false;
+                            this.triedApply = true;
                         });
                         this.loading = false;
                         return;

@@ -8,10 +8,12 @@
     export default {
         props: {
             status: Boolean,
+            successMessage: String,
+            failMessage: String
         },
         data() {
             return {
-                message: this.status ? "Sent successfully" : "Request failed",
+                message: this.status ? this.successMessage : this.failMessage,
             }
         }
     }
