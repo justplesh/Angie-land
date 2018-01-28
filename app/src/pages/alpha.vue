@@ -20,7 +20,6 @@
             </div>
         </div>
         <div class="logo-block login black" id="register">
-            <ring-loader size="120px" v-bind:loading=this.loading></ring-loader>
             <div id="login">
                 <form @submit.prevent="submitForm">
                     <fieldset class="clearfix">
@@ -42,6 +41,7 @@
                     </fieldset>
                 </form>
             </div>
+            <ring-loader size="120px" v-bind:loading=this.loading></ring-loader>
             <v-message v-bind:status="true"></v-message>
         </div>
     </div>
