@@ -47,13 +47,16 @@
                 });
                 this.totalCommits = totalCommits;
             }, res => {
+                console.log("in res");
                 this.showCommitsTrouble();
             }).catch(() => {
+                console.log("in catch");
                 this.showCommitsTrouble();
             })
         },
         methods: {
             showCommitsTrouble() {
+                console.log("in comtroub");
                 this.loading = false;
                 this.failGotCommits = true;
             }
