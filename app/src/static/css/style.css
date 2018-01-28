@@ -209,6 +209,12 @@ img {
 }
 
 .message {
+    display: block !important;
     text-align: center;
     color: white;
+}
+
+.v-ring {
+    display: block !important;
+    margin: auto;
 }
